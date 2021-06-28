@@ -1,0 +1,19 @@
+// base table styles
+@import './variables';
+@import './utils';
+@import './wrap';
+@import './table';
+@import './table-th';
+@import './input';
+@import './loading';
+
+// table enhancements
+@import './bordered';
+@import './striped';
+@import './rtl';
+@import './condensed';
+
+// controls on top
+
+// table footer
+@import './table-footer';

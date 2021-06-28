@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Nunito Sans", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-color: #a7a7a7 #f1f1f1;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $lightGray;
+        border-radius: 10px;
+        border: 3px solid #fff;
+    }
+}
+ul {
+    list-style: none;
+}
+a {
+    color: unset;
+    text-decoration: none;
+    scrollbar-color: #a7a7a7 #f1f1f1;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        height: 7px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #ececec;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $lightGray;
+        border-radius: 10px;
+        border: 1px solid $gray;
+    }
+}
+p {
+    line-height: 1.4;
+}
+h1 {
+    font-size: 2.4rem;
+}
+
+li a.router-link-exact-active {
+    color: $lightTeal !important; // we need this to override component level styles
+    font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    color: $gray;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $gray;
+}
+::placeholder {
+    color: $gray;
+}
+
+.ck-placeholder:before {
+    color: $gray !important; // 3rd party override
+}

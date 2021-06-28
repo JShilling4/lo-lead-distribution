@@ -1,0 +1,76 @@
+// Grid breakpoints
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  } @else if $point == laptop {
+      @media (max-width: 1200px) {
+        @content;
+      }
+  } @else if $point == ipadPro {
+      @media (max-width: 1024px) {
+        @content;
+      }
+  } @else if $point == tablet-land {
+      @media (max-width: 768px) {
+        @content;
+      }
+  } @else if $point == tablet-port {
+      @media (max-width: 556px) {
+        @content;
+      }
+  } @else if $point == mobile {
+      @media (max-width: 430px) {
+        @content;
+      }
+  } @else if $point == mobile-small {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+}
+
+// layout
+@mixin view-pad-2-14() {
+  padding: 2rem 14rem;
+  @media only screen and (max-width: 1400px) {
+    padding: 2rem 2rem;
+  }
+}
+
+// animations
+@mixin slideDownEnter($name, $topFrom, $topTo) {
+  .#{$name}-enter-active,
+  .#{$name}-leave-active {
+    transition: all .3s;
+  }
+  .#{$name}-enter {
+    top: $topFrom !important;
+    opacity: 0;
+  }
+  .#{$name}-enter-to {
+    top: $topTo !important;
+  }
+  .#{$name}-leave-to {
+    opacity: 0;
+    top: $topFrom !important;
+  }
+}
+@mixin slideUpEnter($name, $bottomFrom, $bottomTo) {
+  .#{$name}-enter-active,
+  .#{$name}-leave-active {
+    transition: all .3s;
+  }
+  .#{$name}-enter {
+    bottom: $bottomFrom !important;
+    opacity: 0;
+  }
+  .#{$name}-enter-to {
+    bottom: $bottomTo !important;
+  }
+  .#{$name}-leave-to {
+    opacity: 0;
+    bottom: $bottomFrom !important;
+  }
+}
