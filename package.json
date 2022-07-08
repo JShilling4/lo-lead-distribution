@@ -20,7 +20,7 @@
         "lodash.filter": "^4.6.0",
         "lodash.foreach": "^4.5.0",
         "lodash.isequal": "^4.5.0",
-        "moment": "^2.29.1",
+        "moment": "^2.29.4",
         "vue": "^2.6.11",
         "vue-clickaway": "^2.2.2",
         "vue-ctk-date-time-picker": "^2.5.0",
